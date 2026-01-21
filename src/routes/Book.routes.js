@@ -14,7 +14,7 @@ const {
 const router = require("express").Router();
 router.get("/api/book", GetBookHandler);
 router.get("/api/book/:id", GetDetailBookHandler);
-router.put("/api/book/:id", Validation(BookValidationPut), UpdateBookHandler);
+router.patch("/api/book/:id", Validation(BookValidationPut), UpdateBookHandler);
 router.post("/api/book/", Validation(BookValidation), InsertBookHandler);
 router.delete("/api/book/:id", DeleteBookHandler);
 module.exports = router;

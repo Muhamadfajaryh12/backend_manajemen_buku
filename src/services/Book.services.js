@@ -1,5 +1,6 @@
 const { pool } = require("../config/db");
 const NotFoundError = require("../exceptions/NotFoundError");
+
 class Book {
   async InsertBook(body) {
     const { book_name, description, author, published_date } = body;
